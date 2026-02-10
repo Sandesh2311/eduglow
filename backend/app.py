@@ -30,7 +30,7 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.config["SESSION_COOKIE_SAMESITE"] = "Lax"
 app.config["SESSION_COOKIE_HTTPONLY"] = True
 
-CORS(app, supports_credentials=True)
+CORS(app, supports_credentials=True, origins=["https://eduglow1512.netlify.app"])
 db = SQLAlchemy(app)
 
 APP_BASE_URL = os.environ.get("EDUGLOW_BASE_URL", "http://127.0.0.1:5000")
